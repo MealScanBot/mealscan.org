@@ -63,7 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 0;
+    padding: 14px 28px;
   }
   .brand {
     display: flex;
@@ -78,29 +78,22 @@
     display: grid; place-items: center;
   }
 
-  .lang {
-    display: inline-flex;
-    background: #fff;
+  .lang select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b5a3e' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;
     border: 1px solid var(--line);
     border-radius: 999px;
-    padding: 4px;
-    box-shadow: var(--shadow-sm);
-  }
-  .lang button {
-    appearance: none;
-    border: 0;
-    background: transparent;
+    padding: 7px 32px 7px 14px;
     font: 600 13px/1 'DM Sans', sans-serif;
     color: var(--muted);
-    padding: 7px 14px;
-    border-radius: 999px;
     cursor: pointer;
-    transition: color .18s, background .18s;
-    letter-spacing: .04em;
+    box-shadow: var(--shadow-sm);
+    transition: border-color .18s;
+    outline: none;
   }
-  .lang button.active {
-    background: var(--accent);
-    color: #fff;
+  .lang select:focus {
+    border-color: var(--accent);
   }
 
   /* ============ HERO ============ */
@@ -557,9 +550,18 @@
     <a href="#" class="brand">
       <span>Meal Scan</span>
     </a>
-    <div class="lang" role="group" aria-label="Language">
-      <button data-lang="en" class="active">EN</button>
-      <button data-lang="ru">RU</button>
+    <div class="lang">
+      <select id="lang-select" aria-label="Language">
+        <option value="en">🇬🇧 EN</option>
+        <option value="ru">🇷🇺 RU</option>
+        <option value="uk">🇺🇦 UK</option>
+        <option value="be">🇧🇾 BE</option>
+        <option value="de">🇩🇪 DE</option>
+        <option value="pl">🇵🇱 PL</option>
+        <option value="es">🇪🇸 ES</option>
+        <option value="pt">🇵🇹 PT</option>
+        <option value="ar">🇸🇦 AR</option>
+      </select>
     </div>
   </div>
 </nav>
@@ -794,6 +796,398 @@ const I18N = {
     "foot.privacy": "Privacy",
     "foot.support": "Support"
   },
+  uk: {
+    "hero.badge": "ШІ-помічник · Telegram Bot",
+    "hero.h1": "Рахуй калорії прямо в <span class=\"ink\">Telegram</span>",
+    "hero.sub": "Надішли фото або напиши що поїв — ШІ миттєво рахує калорії та КБЖВ. Без завантаження додатків.",
+    "hero.cta": "Відкрити в Telegram",
+    "hero.note": "15 безкоштовних аналізів · Без реєстрації",
+    "how.eyebrow": "Як це працює",
+    "how.h": "Три торкання — і КБЖВ готово",
+    "how.s1": "Надішли фото або напиши",
+    "how.s2": "ШІ рахує калорії та КБЖВ",
+    "how.s3": "Веди щоденник і стеж за вагою",
+    "feat.eyebrow": "Можливості",
+    "feat.h": "Все, що потрібно для усвідомленого харчування",
+    "feat.f1.t": "Аналіз фото і тексту",
+    "feat.f1.d": "Наведи камеру або напиши — миттєві КБЖВ",
+    "feat.f2.t": "Щоденник харчування",
+    "feat.f2.d": "Повна історія з підсумками дня по калоріях та КБЖВ",
+    "feat.f3.t": "Трекер ваги",
+    "feat.f3.d": "Записуй вагу і стеж за прогресом до мети",
+    "feat.f4.t": "Нагадування про їжу",
+    "feat.f4.d": "Сніданок, обід, вечеря — не забудь записати",
+    "price.eyebrow": "Тарифи",
+    "price.h": "Починай безкоштовно, продовж коли зацепить",
+    "price.pop": "Популярний",
+    "price.free.name": "Безкоштовно",
+    "price.free.amt": "Безкоштовно",
+    "price.free.sub": "15 аналізів",
+    "price.free.l1": "Аналіз фото і тексту",
+    "price.free.l2": "Щоденник харчування",
+    "price.free.l3": "Трекер ваги",
+    "price.free.l4": "9 мов",
+    "price.free.btn": "Почати безкоштовно",
+    "price.m1.name": "1 місяць",
+    "price.stars": "Telegram Stars",
+    "price.m1.per": "на місяць",
+    "price.m1.l1": "Безлімітні аналізи",
+    "price.m1.l2": "Аналіз фото і тексту",
+    "price.m1.l3": "Повний щоденник",
+    "price.m1.l4": "Трекер ваги",
+    "price.m1.l5": "Нагадування про їжу",
+    "price.sub": "Підписатися",
+    "price.m3.name": "3 місяці",
+    "price.stars2": "Telegram Stars",
+    "price.m3.per": "за 3 місяці",
+    "price.save": "Економія 17%",
+    "price.m3.l1": "Безлімітні аналізи",
+    "price.m3.l2": "Аналіз фото і тексту",
+    "price.m3.l3": "Повний щоденник",
+    "price.m3.l4": "Трекер ваги",
+    "price.m3.l5": "Нагадування про їжу",
+    "price.sub2": "Підписатися",
+    "price.note": "* Оплата через Telegram Stars",
+    "foot.terms": "Умови",
+    "foot.privacy": "Конфіденційність",
+    "foot.support": "Підтримка"
+  },
+  be: {
+    "hero.badge": "AI-памочнік · Telegram Bot",
+    "hero.h1": "Лічы калорыі прама ў <span class=\"ink\">Telegram</span>",
+    "hero.sub": "Адпраў фота або напішы што з'еў — AI імгненна лічыць калорыі і БЖВ. Без спампоўкі прыкладанняў.",
+    "hero.cta": "Адкрыць у Telegram",
+    "hero.note": "15 бясплатных аналізаў · Без рэгістрацыі",
+    "how.eyebrow": "Як гэта працуе",
+    "how.h": "Тры дотыкі — і БЖВ гатова",
+    "how.s1": "Адпраў фота або напішы",
+    "how.s2": "AI лічыць калорыі і БЖВ",
+    "how.s3": "Вядзі дзённік і сачы за вагой",
+    "feat.eyebrow": "Магчымасці",
+    "feat.h": "Усё для ўсвядомленага харчавання",
+    "feat.f1.t": "Аналіз фота і тэксту",
+    "feat.f1.d": "Навядзі камеру або напішы — імгненныя БЖВ",
+    "feat.f2.t": "Дзённік харчавання",
+    "feat.f2.d": "Поўная гісторыя з вынікамі дня па калорыях і БЖВ",
+    "feat.f3.t": "Трэкер вагі",
+    "feat.f3.d": "Запісвай вагу і сачы за прагрэсам да мэты",
+    "feat.f4.t": "Напаміны пра ежу",
+    "feat.f4.d": "Сняданак, абед, вячэра — не забудзь запісаць",
+    "price.eyebrow": "Тарыфы",
+    "price.h": "Пачні бясплатна, працягні калі зачэпіць",
+    "price.pop": "Папулярны",
+    "price.free.name": "Бясплатна",
+    "price.free.amt": "Бясплатна",
+    "price.free.sub": "15 аналізаў",
+    "price.free.l1": "Аналіз фота і тэксту",
+    "price.free.l2": "Дзённік харчавання",
+    "price.free.l3": "Трэкер вагі",
+    "price.free.l4": "9 моў",
+    "price.free.btn": "Пачаць бясплатна",
+    "price.m1.name": "1 месяц",
+    "price.stars": "Telegram Stars",
+    "price.m1.per": "у месяц",
+    "price.m1.l1": "Безлімітныя аналізы",
+    "price.m1.l2": "Аналіз фота і тэксту",
+    "price.m1.l3": "Поўны дзённік",
+    "price.m1.l4": "Трэкер вагі",
+    "price.m1.l5": "Напаміны пра ежу",
+    "price.sub": "Падпісацца",
+    "price.m3.name": "3 месяцы",
+    "price.stars2": "Telegram Stars",
+    "price.m3.per": "за 3 месяцы",
+    "price.save": "Эканомія 17%",
+    "price.m3.l1": "Безлімітныя аналізы",
+    "price.m3.l2": "Аналіз фота і тэксту",
+    "price.m3.l3": "Поўны дзённік",
+    "price.m3.l4": "Трэкер вагі",
+    "price.m3.l5": "Напаміны пра ежу",
+    "price.sub2": "Падпісацца",
+    "price.note": "* Аплата праз Telegram Stars",
+    "foot.terms": "Умовы",
+    "foot.privacy": "Прыватнасць",
+    "foot.support": "Падтрымка"
+  },
+  de: {
+    "hero.badge": "KI-gestützt · Telegram Bot",
+    "hero.h1": "Kalorien tracken direkt in <span class=\"ink\">Telegram</span>",
+    "hero.sub": "Schick ein Foto oder schreib was du gegessen hast — KI zählt Kalorien und Makros sofort. Keine App nötig.",
+    "hero.cta": "In Telegram öffnen",
+    "hero.note": "15 kostenlose Analysen · Keine Registrierung",
+    "how.eyebrow": "So funktioniert's",
+    "how.h": "Drei Schritte bis zu deinen Makros",
+    "how.s1": "Foto senden oder tippen",
+    "how.s2": "KI berechnet Kalorien & Makros",
+    "how.s3": "Tagebuch führen & Gewicht tracken",
+    "feat.eyebrow": "Funktionen",
+    "feat.h": "Alles für bewusstes Essen",
+    "feat.f1.t": "Foto & Text Analyse",
+    "feat.f1.d": "Kamera auf das Essen richten oder beschreiben — sofortige Makros",
+    "feat.f2.t": "Ernährungstagebuch",
+    "feat.f2.d": "Vollständige Historie mit Tagessummen",
+    "feat.f3.t": "Gewichts-Tracker",
+    "feat.f3.d": "Gewicht eintragen und Fortschritt verfolgen",
+    "feat.f4.t": "Mahlzeiten-Erinnerungen",
+    "feat.f4.d": "Frühstück, Mittag, Abendessen — nie vergessen",
+    "price.eyebrow": "Preise",
+    "price.h": "Kostenlos starten, upgraden wenn du süchtig bist",
+    "price.pop": "Beliebteste",
+    "price.free.name": "Kostenlos",
+    "price.free.amt": "Kostenlos",
+    "price.free.sub": "15 Analysen",
+    "price.free.l1": "Foto & Text Analyse",
+    "price.free.l2": "Ernährungstagebuch",
+    "price.free.l3": "Gewichts-Tracker",
+    "price.free.l4": "9 Sprachen",
+    "price.free.btn": "Kostenlos starten",
+    "price.m1.name": "1 Monat",
+    "price.stars": "Telegram Stars",
+    "price.m1.per": "pro Monat",
+    "price.m1.l1": "Unbegrenzte Analysen",
+    "price.m1.l2": "Foto & Text Analyse",
+    "price.m1.l3": "Vollständiges Tagebuch",
+    "price.m1.l4": "Gewichts-Tracker",
+    "price.m1.l5": "Mahlzeiten-Erinnerungen",
+    "price.sub": "Abonnieren",
+    "price.m3.name": "3 Monate",
+    "price.stars2": "Telegram Stars",
+    "price.m3.per": "für 3 Monate",
+    "price.save": "17% sparen",
+    "price.m3.l1": "Unbegrenzte Analysen",
+    "price.m3.l2": "Foto & Text Analyse",
+    "price.m3.l3": "Vollständiges Tagebuch",
+    "price.m3.l4": "Gewichts-Tracker",
+    "price.m3.l5": "Mahlzeiten-Erinnerungen",
+    "price.sub2": "Abonnieren",
+    "price.note": "* Zahlung über Telegram Stars",
+    "foot.terms": "Nutzungsbedingungen",
+    "foot.privacy": "Datenschutz",
+    "foot.support": "Support"
+  },
+  pl: {
+    "hero.badge": "Wspierany AI · Bot Telegram",
+    "hero.h1": "Licz kalorie prosto w <span class=\"ink\">Telegram</span>",
+    "hero.sub": "Wyślij zdjęcie lub napisz co zjadłeś — AI natychmiast liczy kalorie i makro. Bez pobierania aplikacji.",
+    "hero.cta": "Otwórz w Telegram",
+    "hero.note": "15 darmowych analiz · Bez rejestracji",
+    "how.eyebrow": "Jak to działa",
+    "how.h": "Trzy kroki do twoich makro",
+    "how.s1": "Wyślij zdjęcie lub napisz",
+    "how.s2": "AI liczy kalorie i makro",
+    "how.s3": "Prowadź dziennik i śledź wagę",
+    "feat.eyebrow": "Funkcje",
+    "feat.h": "Wszystko do świadomego jedzenia",
+    "feat.f1.t": "Analiza zdjęć i tekstu",
+    "feat.f1.d": "Skieruj kamerę na posiłek lub opisz go — natychmiastowe makro",
+    "feat.f2.t": "Dziennik żywienia",
+    "feat.f2.d": "Pełna historia z dziennymi sumami kalorii i makro",
+    "feat.f3.t": "Tracker wagi",
+    "feat.f3.d": "Zapisuj wagę i śledź postęp do celu",
+    "feat.f4.t": "Przypomnienia o posiłkach",
+    "feat.f4.d": "Śniadanie, obiad, kolacja — nie zapomnij zapisać",
+    "price.eyebrow": "Cennik",
+    "price.h": "Zacznij za darmo, kup gdy się wciągniesz",
+    "price.pop": "Najpopularniejszy",
+    "price.free.name": "Darmowy",
+    "price.free.amt": "Darmowy",
+    "price.free.sub": "15 analiz",
+    "price.free.l1": "Analiza zdjęć i tekstu",
+    "price.free.l2": "Dziennik żywienia",
+    "price.free.l3": "Tracker wagi",
+    "price.free.l4": "9 języków",
+    "price.free.btn": "Zacznij za darmo",
+    "price.m1.name": "1 miesiąc",
+    "price.stars": "Telegram Stars",
+    "price.m1.per": "miesięcznie",
+    "price.m1.l1": "Nieograniczone analizy",
+    "price.m1.l2": "Analiza zdjęć i tekstu",
+    "price.m1.l3": "Pełny dziennik",
+    "price.m1.l4": "Tracker wagi",
+    "price.m1.l5": "Przypomnienia o posiłkach",
+    "price.sub": "Subskrybuj",
+    "price.m3.name": "3 miesiące",
+    "price.stars2": "Telegram Stars",
+    "price.m3.per": "za 3 miesiące",
+    "price.save": "Oszczędź 17%",
+    "price.m3.l1": "Nieograniczone analizy",
+    "price.m3.l2": "Analiza zdjęć i tekstu",
+    "price.m3.l3": "Pełny dziennik",
+    "price.m3.l4": "Tracker wagi",
+    "price.m3.l5": "Przypomnienia o posiłkach",
+    "price.sub2": "Subskrybuj",
+    "price.note": "* Płatność przez Telegram Stars",
+    "foot.terms": "Regulamin",
+    "foot.privacy": "Prywatność",
+    "foot.support": "Wsparcie"
+  },
+  es: {
+    "hero.badge": "Con IA · Bot de Telegram",
+    "hero.h1": "Cuenta calorías sin salir de <span class=\"ink\">Telegram</span>",
+    "hero.sub": "Envía una foto o escribe lo que comiste — la IA cuenta calorías y macros al instante. Sin descargar apps.",
+    "hero.cta": "Abrir en Telegram",
+    "hero.note": "15 análisis gratis · Sin registro",
+    "how.eyebrow": "Cómo funciona",
+    "how.h": "Tres pasos hasta tus macros",
+    "how.s1": "Envía una foto o escribe",
+    "how.s2": "La IA calcula calorías y macros",
+    "how.s3": "Lleva tu diario y controla el peso",
+    "feat.eyebrow": "Funciones",
+    "feat.h": "Todo para comer con conciencia",
+    "feat.f1.t": "Análisis de fotos y texto",
+    "feat.f1.d": "Apunta la cámara a cualquier comida o descríbela — macros al instante",
+    "feat.f2.t": "Diario nutricional",
+    "feat.f2.d": "Historial completo con totales diarios de calorías y macros",
+    "feat.f3.t": "Rastreador de peso",
+    "feat.f3.d": "Registra tu peso y sigue tu progreso hacia tu meta",
+    "feat.f4.t": "Recordatorios de comidas",
+    "feat.f4.d": "Desayuno, almuerzo, cena — nunca olvides registrar",
+    "price.eyebrow": "Precios",
+    "price.h": "Empieza gratis, mejora cuando te enganche",
+    "price.pop": "Más popular",
+    "price.free.name": "Gratis",
+    "price.free.amt": "Gratis",
+    "price.free.sub": "15 análisis",
+    "price.free.l1": "Análisis de fotos y texto",
+    "price.free.l2": "Diario nutricional",
+    "price.free.l3": "Rastreador de peso",
+    "price.free.l4": "9 idiomas",
+    "price.free.btn": "Empezar gratis",
+    "price.m1.name": "1 mes",
+    "price.stars": "Telegram Stars",
+    "price.m1.per": "por mes",
+    "price.m1.l1": "Análisis ilimitados",
+    "price.m1.l2": "Análisis de fotos y texto",
+    "price.m1.l3": "Diario completo",
+    "price.m1.l4": "Rastreador de peso",
+    "price.m1.l5": "Recordatorios de comidas",
+    "price.sub": "Suscribirse",
+    "price.m3.name": "3 meses",
+    "price.stars2": "Telegram Stars",
+    "price.m3.per": "por 3 meses",
+    "price.save": "Ahorra 17%",
+    "price.m3.l1": "Análisis ilimitados",
+    "price.m3.l2": "Análisis de fotos y texto",
+    "price.m3.l3": "Diario completo",
+    "price.m3.l4": "Rastreador de peso",
+    "price.m3.l5": "Recordatorios de comidas",
+    "price.sub2": "Suscribirse",
+    "price.note": "* Pago vía Telegram Stars",
+    "foot.terms": "Términos",
+    "foot.privacy": "Privacidad",
+    "foot.support": "Soporte"
+  },
+  pt: {
+    "hero.badge": "Com IA · Bot do Telegram",
+    "hero.h1": "Conta calorias sem sair do <span class=\"ink\">Telegram</span>",
+    "hero.sub": "Envie uma foto ou escreva o que comeu — a IA conta calorias e macros na hora. Sem baixar apps.",
+    "hero.cta": "Abrir no Telegram",
+    "hero.note": "15 análises grátis · Sem cadastro",
+    "how.eyebrow": "Como funciona",
+    "how.h": "Três passos até seus macros",
+    "how.s1": "Envie uma foto ou escreva",
+    "how.s2": "IA calcula calorias e macros",
+    "how.s3": "Mantenha seu diário e acompanhe o peso",
+    "feat.eyebrow": "Funcionalidades",
+    "feat.h": "Tudo para comer com consciência",
+    "feat.f1.t": "Análise de fotos e texto",
+    "feat.f1.d": "Aponte a câmera para qualquer refeição ou descreva — macros na hora",
+    "feat.f2.t": "Diário nutricional",
+    "feat.f2.d": "Histórico completo com totais diários de calorias e macros",
+    "feat.f3.t": "Rastreador de peso",
+    "feat.f3.d": "Registre seu peso e acompanhe o progresso até sua meta",
+    "feat.f4.t": "Lembretes de refeições",
+    "feat.f4.d": "Café, almoço, jantar — nunca esqueça de registrar",
+    "price.eyebrow": "Preços",
+    "price.h": "Comece grátis, assine quando viciar",
+    "price.pop": "Mais popular",
+    "price.free.name": "Grátis",
+    "price.free.amt": "Grátis",
+    "price.free.sub": "15 análises",
+    "price.free.l1": "Análise de fotos e texto",
+    "price.free.l2": "Diário nutricional",
+    "price.free.l3": "Rastreador de peso",
+    "price.free.l4": "9 idiomas",
+    "price.free.btn": "Começar grátis",
+    "price.m1.name": "1 mês",
+    "price.stars": "Telegram Stars",
+    "price.m1.per": "por mês",
+    "price.m1.l1": "Análises ilimitadas",
+    "price.m1.l2": "Análise de fotos e texto",
+    "price.m1.l3": "Diário completo",
+    "price.m1.l4": "Rastreador de peso",
+    "price.m1.l5": "Lembretes de refeições",
+    "price.sub": "Assinar",
+    "price.m3.name": "3 meses",
+    "price.stars2": "Telegram Stars",
+    "price.m3.per": "por 3 meses",
+    "price.save": "Economize 17%",
+    "price.m3.l1": "Análises ilimitadas",
+    "price.m3.l2": "Análise de fotos e texto",
+    "price.m3.l3": "Diário completo",
+    "price.m3.l4": "Rastreador de peso",
+    "price.m3.l5": "Lembretes de refeições",
+    "price.sub2": "Assinar",
+    "price.note": "* Pagamento via Telegram Stars",
+    "foot.terms": "Termos",
+    "foot.privacy": "Privacidade",
+    "foot.support": "Suporte"
+  },
+  ar: {
+    "hero.badge": "مدعوم بالذكاء الاصطناعي · بوت تيليجرام",
+    "hero.h1": "تتبع السعرات الحرارية داخل <span class=\"ink\">Telegram</span>",
+    "hero.sub": "أرسل صورة أو اكتب ما أكلت — الذكاء الاصطناعي يحسب السعرات والماكرو فوراً. بدون تحميل تطبيقات.",
+    "hero.cta": "فتح في Telegram",
+    "hero.note": "15 تحليلاً مجانياً · بدون تسجيل",
+    "how.eyebrow": "كيف يعمل",
+    "how.h": "ثلاث خطوات حتى الماكرو",
+    "how.s1": "أرسل صورة أو اكتب",
+    "how.s2": "الذكاء الاصطناعي يحسب السعرات والماكرو",
+    "how.s3": "تتبع يومياتك ووزنك",
+    "feat.eyebrow": "المميزات",
+    "feat.h": "كل ما تحتاجه لتناول طعام واعٍ",
+    "feat.f1.t": "تحليل الصور والنص",
+    "feat.f1.d": "وجّه الكاميرا لأي وجبة أو صفها — ماكرو فوري",
+    "feat.f2.t": "يومية التغذية",
+    "feat.f2.d": "سجل كامل مع مجاميع يومية للسعرات والماكرو",
+    "feat.f3.t": "متتبع الوزن",
+    "feat.f3.d": "سجل وزنك وتابع تقدمك نحو هدفك",
+    "feat.f4.t": "تذكيرات الوجبات",
+    "feat.f4.d": "الإفطار والغداء والعشاء — لا تنسَ التسجيل",
+    "price.eyebrow": "الأسعار",
+    "price.h": "ابدأ مجاناً، اشترك عندما تتعلق",
+    "price.pop": "الأكثر شعبية",
+    "price.free.name": "مجاني",
+    "price.free.amt": "مجاني",
+    "price.free.sub": "15 تحليلاً",
+    "price.free.l1": "تحليل الصور والنص",
+    "price.free.l2": "يومية التغذية",
+    "price.free.l3": "متتبع الوزن",
+    "price.free.l4": "9 لغات",
+    "price.free.btn": "ابدأ مجاناً",
+    "price.m1.name": "شهر واحد",
+    "price.stars": "Telegram Stars",
+    "price.m1.per": "شهرياً",
+    "price.m1.l1": "تحليلات غير محدودة",
+    "price.m1.l2": "تحليل الصور والنص",
+    "price.m1.l3": "يومية كاملة",
+    "price.m1.l4": "متتبع الوزن",
+    "price.m1.l5": "تذكيرات الوجبات",
+    "price.sub": "اشترك",
+    "price.m3.name": "3 أشهر",
+    "price.stars2": "Telegram Stars",
+    "price.m3.per": "لمدة 3 أشهر",
+    "price.save": "وفر 17%",
+    "price.m3.l1": "تحليلات غير محدودة",
+    "price.m3.l2": "تحليل الصور والنص",
+    "price.m3.l3": "يومية كاملة",
+    "price.m3.l4": "متتبع الوزن",
+    "price.m3.l5": "تذكيرات الوجبات",
+    "price.sub2": "اشترك",
+    "price.note": "* الدفع عبر Telegram Stars",
+    "foot.terms": "الشروط",
+    "foot.privacy": "الخصوصية",
+    "foot.support": "الدعم"
+  },
   ru: {
     "hero.badge": "ИИ-помощник · Telegram Bot",
     "hero.h1": "Считай калории прямо в <span class=\"ink\">Telegram</span>",
@@ -855,6 +1249,7 @@ const I18N = {
 function applyLang(lang) {
   const dict = I18N[lang] || I18N.en;
   document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const k = el.getAttribute('data-i18n');
     if (dict[k]) el.textContent = dict[k];
@@ -863,9 +1258,8 @@ function applyLang(lang) {
     const k = el.getAttribute('data-i18n-html');
     if (dict[k]) el.innerHTML = dict[k];
   });
-  document.querySelectorAll('.lang button').forEach(b => {
-    b.classList.toggle('active', b.dataset.lang === lang);
-  });
+  const sel = document.getElementById('lang-select');
+  if (sel) sel.value = lang;
   try { localStorage.setItem('mealscan_lang', lang); } catch(e) {}
 }
 
@@ -874,13 +1268,14 @@ function detectLang() {
   try { saved = localStorage.getItem('mealscan_lang'); } catch(e) {}
   if (saved && I18N[saved]) return saved;
   const nav = (navigator.language || 'en').toLowerCase();
-  if (nav.startsWith('ru')) return 'ru';
+  const map = { ru: 'ru', uk: 'uk', be: 'be', de: 'de', pl: 'pl', es: 'es', pt: 'pt', ar: 'ar' };
+  for (const [prefix, code] of Object.entries(map)) {
+    if (nav.startsWith(prefix)) return code;
+  }
   return 'en';
 }
 
-document.querySelectorAll('.lang button').forEach(b => {
-  b.addEventListener('click', () => applyLang(b.dataset.lang));
-});
+document.getElementById('lang-select').addEventListener('change', e => applyLang(e.target.value));
 applyLang(detectLang());
 
 /* ============ REVEAL ============ */
