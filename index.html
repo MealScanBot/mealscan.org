@@ -102,14 +102,7 @@
     position: relative;
     overflow: hidden;
   }
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: -200px -120px auto auto;
-    width: 700px; height: 700px;
-    background: radial-gradient(closest-side, rgba(240,106,0,.10), transparent 70%);
-    pointer-events: none;
-  }
+  .hero::before { display: none; }
   .hero-grid {
     display: grid;
     grid-template-columns: 1fr;
