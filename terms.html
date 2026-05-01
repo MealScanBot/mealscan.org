@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Terms of Service — Meal Scan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #fffdf9;
+    --card: #ffffff;
+    --accent: #f06a00;
+    --accent-soft: #ffe4cc;
+    --accent-deep: #c8530a;
+    --text: #1a1208;
+    --muted: #6b5a3e;
+    --line: #f1e7d8;
+    --shadow-sm: 0 1px 2px rgba(60,40,10,.04), 0 4px 12px rgba(60,40,10,.04);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ---- nav ---- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    background: rgba(255,253,249,0.78);
+    border-bottom: 1px solid rgba(241,231,216,0.7);
+  }
+  .nav-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--text);
+  }
+  .brand:hover { text-decoration: none; }
+  .lang {
+    display: inline-flex;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px;
+    box-shadow: var(--shadow-sm);
+  }
+  .lang button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    font: 600 13px/1 'DM Sans', sans-serif;
+    color: var(--muted);
+    padding: 7px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color .18s, background .18s;
+    letter-spacing: .04em;
+  }
+  .lang button.active {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  /* ---- doc body ---- */
+  .doc {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 28px 96px;
+  }
+  .back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+  .back:hover { text-decoration: underline; }
+
+  .lang-label {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: clamp(34px, 4vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 28px;
+  }
+
+  .callout {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    color: var(--accent-deep);
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 15px;
+    margin: 0 0 36px;
+  }
+
+  h2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin: 36px 0 10px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  h2 .num {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: .08em;
+    flex-shrink: 0;
+    min-width: 24px;
+  }
+  p { margin: 0 0 12px; }
+  ul {
+    margin: 0 0 14px;
+    padding: 0;
+    list-style: none;
+  }
+  ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+  }
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 11px;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed var(--line);
+    margin: 64px 0;
+  }
+
+  code {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 14px;
+    background: var(--accent-soft);
+    color: var(--accent-deep);
+    padding: 1px 7px;
+    border-radius: 6px;
+  }
+
+  /* ---- footer ---- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 36px 28px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer a { color: var(--text); margin: 0 10px; font-weight: 500; }
+
+  @media (max-width: 640px) {
+    .doc { padding: 40px 22px 72px; }
+    h1 { font-size: 32px; }
+    h2 { flex-direction: column; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span>Meal Scan</span>
+    </a>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-jump="en" class="active">EN</button>
+      <button data-jump="ru">RU</button>
+    </div>
+  </div>
+</nav>
+
+<main class="doc">
+  <a href="index.html" class="back">← Back to Meal Scan</a>
+
+  <!-- ============ EN ============ -->
+  <section id="en">
+    <span class="lang-label">EN</span>
+    <h1>Terms of Service</h1>
+    <p class="updated">Last updated: April 2025</p>
+
+    <div class="callout">
+      ⚠️ Meal Scan is a nutrition tracking tool. It is not a medical application and does not replace advice from a doctor, dietitian, or nutritionist.
+    </div>
+
+    <h2><span class="num">01</span><span>Acceptance of terms</span></h2>
+    <p>By using the Meal Scan Telegram bot, you agree to these Terms of Service. If you do not agree, please stop using the bot.</p>
+
+    <h2><span class="num">02</span><span>Service description</span></h2>
+    <p>Meal Scan helps users:</p>
+    <ul>
+      <li>track calorie intake and macronutrients (protein, fat, carbs)</li>
+      <li>set weight and calorie goals</li>
+      <li>review their nutrition history</li>
+    </ul>
+    <p>Nutritional data is calculated automatically using AI and is approximate.</p>
+
+    <h2><span class="num">03</span><span>Medical disclaimer</span></h2>
+    <p>Meal Scan is not a medical device, diagnostic tool, or substitute for professional medical advice. Before changing your diet — especially if you have chronic conditions, eating disorders, are pregnant, or have other health concerns — consult a qualified healthcare professional.</p>
+
+    <h2><span class="num">04</span><span>Accuracy of data</span></h2>
+    <p>Calorie and macronutrient estimates are generated by AI and may contain errors. Users are solely responsible for any decisions made based on this data.</p>
+
+    <h2><span class="num">05</span><span>User data</span></h2>
+    <ul>
+      <li>We store nutrition and weight data solely to provide the service</li>
+      <li>Data is not shared with third parties for commercial purposes</li>
+      <li>You can delete your data at any time using <code>/reset</code></li>
+    </ul>
+
+    <h2><span class="num">06</span><span>Subscription and payment</span></h2>
+    <p>Meal Scan offers a free trial period. After the trial ends, a paid subscription is required to continue. Payments are processed via Stripe. Refund requests are reviewed individually within 7 days of payment.</p>
+
+    <h2><span class="num">07</span><span>Limitation of liability</span></h2>
+    <p>The service is provided "as is." We are not liable for any consequences of decisions made based on the bot's output.</p>
+
+    <h2><span class="num">08</span><span>Contact</span></h2>
+    <p>Questions and support: <a href="https://t.me/Meal_Scan_Support" target="_blank" rel="noopener">@Meal_Scan_Support</a></p>
+  </section>
+
+  <hr>
+
+  <!-- ============ RU ============ -->
+  <section id="ru">
+    <span class="lang-label">RU</span>
+    <h1>Условия использования</h1>
+    <p class="updated">Последнее обновление: апрель 2025 г.</p>
+
+    <div class="callout">
+      ⚠️ Meal Scan — инструмент для отслеживания питания. Бот не является медицинским приложением и не заменяет консультацию врача, диетолога или нутрициолога.
+    </div>
+
+    <h2><span class="num">01</span><span>Общие положения</span></h2>
+    <p>Используя бота Meal Scan в Telegram, вы соглашаетесь с настоящими условиями. Если вы не согласны — пожалуйста, прекратите использование бота.</p>
+
+    <h2><span class="num">02</span><span>Назначение сервиса</span></h2>
+    <p>Meal Scan помогает пользователям:</p>
+    <ul>
+      <li>отслеживать калорийность и КБЖУ питания</li>
+      <li>ставить цели по весу и калориям</li>
+      <li>просматривать историю питания</li>
+    </ul>
+    <p>Данные о питании рассчитываются автоматически на основе ИИ и носят приблизительный характер.</p>
+
+    <h2><span class="num">03</span><span>Медицинский дисклеймер</span></h2>
+    <p>Meal Scan не является медицинским устройством, диагностическим инструментом или заменой профессиональной медицинской помощи. Перед изменением рациона питания, при наличии хронических заболеваний, расстройств пищевого поведения, беременности или других состояний здоровья — проконсультируйтесь с врачом или сертифицированным специалистом.</p>
+
+    <h2><span class="num">04</span><span>Точность данных</span></h2>
+    <p>Оценка калорийности и КБЖУ производится с помощью ИИ и может содержать погрешности. Пользователь самостоятельно несёт ответственность за принимаемые на основе этих данных решения.</p>
+
+    <h2><span class="num">05</span><span>Данные пользователей</span></h2>
+    <ul>
+      <li>Мы храним данные о питании и весе только для обеспечения работы сервиса</li>
+      <li>Данные не передаются третьим лицам в коммерческих целях</li>
+      <li>Вы можете удалить свои данные командой <code>/reset</code></li>
+    </ul>
+
+    <h2><span class="num">06</span><span>Подписка и оплата</span></h2>
+    <p>Meal Scan предоставляет бесплатный пробный период. После его окончания для продолжения использования требуется оформление платной подписки. Оплата осуществляется через Stripe. Возврат средств рассматривается индивидуально в течение 7 дней с момента оплаты.</p>
+
+    <h2><span class="num">07</span><span>Ограничение ответственности</span></h2>
+    <p>Сервис предоставляется «как есть». Мы не несём ответственности за последствия решений, принятых на основе данных бота.</p>
+
+    <h2><span class="num">08</span><span>Контакт</span></h2>
+    <p>Вопросы и обращения: <a href="https://t.me/Meal_Scan_Support" target="_blank" rel="noopener">@Meal_Scan_Support</a></p>
+  </section>
+</main>
+
+<footer>
+  <div>© 2025 Meal Scan · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="https://t.me/Meal_Scan_Support" target="_blank" rel="noopener">Support</a></div>
+</footer>
+
+<script>
+  // Lang switcher just jumps to the language section and toggles active state.
+  const buttons = document.querySelectorAll('.lang button');
+  function setActive(lang) {
+    buttons.forEach(b => b.classList.toggle('active', b.dataset.jump === lang));
+  }
+  buttons.forEach(b => {
+    b.addEventListener('click', () => {
+      const lang = b.dataset.jump;
+      setActive(lang);
+      const el = document.getElementById(lang);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Default: detect from saved lang or navigator
+  let initial = 'en';
+  try {
+    const saved = localStorage.getItem('mealscan_lang');
+    if (saved === 'ru' || saved === 'en') initial = saved;
+    else if ((navigator.language || '').toLowerCase().startsWith('ru')) initial = 'ru';
+  } catch(e) {}
+  setActive(initial);
+</script>
+
+</body>
+</html>
