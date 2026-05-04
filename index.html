@@ -9,17 +9,17 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap">
 <style>
   :root {
-    --bg: #fffdf9;
+    --bg: #f6fbf0;
     --card: #ffffff;
-    --accent: #f06a00;
-    --accent-soft: #ffe4cc;
-    --accent-deep: #c8530a;
-    --text: #1a1208;
-    --muted: #6b5a3e;
-    --line: #f1e7d8;
-    --shadow-sm: 0 1px 2px rgba(60,40,10,.04), 0 4px 12px rgba(60,40,10,.04);
-    --shadow-md: 0 2px 4px rgba(60,40,10,.04), 0 14px 32px rgba(60,40,10,.07);
-    --shadow-lg: 0 4px 10px rgba(60,40,10,.06), 0 30px 60px rgba(240,106,0,.10);
+    --accent: #52c41a;
+    --accent-soft: #e4f7d0;
+    --accent-deep: #389e0d;
+    --text: #182810;
+    --muted: #4a6b35;
+    --line: #d4edbc;
+    --shadow-sm: 0 1px 2px rgba(20,60,10,.04), 0 4px 12px rgba(20,60,10,.04);
+    --shadow-md: 0 2px 4px rgba(20,60,10,.04), 0 14px 32px rgba(20,60,10,.07);
+    --shadow-lg: 0 4px 10px rgba(20,60,10,.06), 0 30px 60px rgba(82,196,26,.12);
     --radius: 18px;
   }
 
@@ -133,7 +133,7 @@
     width: 6px; height: 6px;
     background: var(--accent);
     border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(240,106,0,.18);
+    box-shadow: 0 0 0 4px rgba(82,196,26,.18);
   }
   h1.hero-h {
     font-size: clamp(40px, 5.4vw, 64px);
@@ -142,7 +142,7 @@
     text-wrap: balance;
   }
   h1.hero-h .ink {
-    background: linear-gradient(180deg, #f06a00 0%, #c8530a 100%);
+    background: linear-gradient(180deg, #52c41a 0%, #389e0d 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -175,11 +175,11 @@
   .btn-primary {
     background: var(--accent);
     color: #fff;
-    box-shadow: 0 8px 22px rgba(240,106,0,.32), inset 0 -3px 0 rgba(0,0,0,.10);
+    box-shadow: 0 8px 22px rgba(82,196,26,.32), inset 0 -3px 0 rgba(0,0,0,.10);
   }
   .btn-primary:hover {
     transform: scale(1.04);
-    box-shadow: 0 12px 28px rgba(240,106,0,.4), inset 0 -3px 0 rgba(0,0,0,.10);
+    box-shadow: 0 12px 28px rgba(82,196,26,.4), inset 0 -3px 0 rgba(0,0,0,.10);
   }
   .btn-secondary {
     background: #fff;
@@ -203,7 +203,7 @@
     position: absolute;
     inset: 8% 8% auto 8%;
     bottom: 8%;
-    background: radial-gradient(closest-side, rgba(240,106,0,.45), rgba(240,106,0,0) 70%);
+    background: radial-gradient(closest-side, rgba(82,196,26,.45), rgba(82,196,26,0) 70%);
     filter: blur(8px);
   }
   .mascot-floor {
@@ -220,7 +220,7 @@
     position: relative;
     width: 80%;
     animation: floaty 4s ease-in-out infinite;
-    filter: drop-shadow(0 18px 22px rgba(240,106,0,.25));
+    filter: drop-shadow(0 18px 22px rgba(82,196,26,.25));
   }
   @keyframes floaty {
     0%, 100% { transform: translateY(0); }
@@ -370,7 +370,7 @@
     letter-spacing: .04em;
     padding: 6px 14px;
     border-radius: 999px;
-    box-shadow: 0 6px 14px rgba(240,106,0,.3);
+    box-shadow: 0 6px 14px rgba(82,196,26,.3);
   }
   .price-name {
     font-family: 'Sora', sans-serif;
@@ -446,7 +446,7 @@
     width: 18px; height: 18px;
     margin-top: 2px;
     border-radius: 50%;
-    background: var(--accent-soft) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M2.5 6.2l2.4 2.4 4.6-5.2' fill='none' stroke='%23c8530a' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/12px no-repeat;
+    background: var(--accent-soft) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M2.5 6.2l2.4 2.4 4.6-5.2' fill='none' stroke='%23389e0d' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/12px no-repeat;
   }
   .price .btn {
     width: 100%;
