@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="refresh" content="0; url=https://t.me/mealscan_ai_bot" />
+  <title>MealScan — Opening in Telegram…</title>
+  <meta name="description" content="MealScan AI bot — track your calories and nutrition by simply sending a photo of your meal. Opening in Telegram." />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+  <link rel="canonical" href="https://mealscan.org/start" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500&display=swap" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      font-family: 'DM Sans', system-ui, sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #0d2e1a;
+      color: #e8fdf0;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      padding: 48px 40px;
+      text-align: center;
+      animation: fadeIn .35s ease;
+    }
+
+    /* Logo */
+    .logo-wrap {
+      width: 88px;
+      height: 88px;
+      border-radius: 24px;
+      background: #1a4a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 1px rgba(74,222,128,.15), 0 8px 32px rgba(0,0,0,.35);
+    }
+
+    .logo-wrap img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    /* Wordmark */
+    .wordmark {
+      font-family: 'Sora', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -.5px;
+      color: #e8fdf0;
+    }
+
+    .wordmark span {
+      color: #4ade80;
+    }
+
+    /* Tagline */
+    .tagline {
+      font-size: 15px;
+      color: #7bc89a;
+      line-height: 1.5;
+      max-width: 280px;
+    }
+
+    /* Loader ring */
+    .loader {
+      width: 44px;
+      height: 44px;
+    }
+
+    .loader circle {
+      fill: none;
+      stroke: #4ade80;
+      stroke-width: 3.5;
+      stroke-linecap: round;
+      stroke-dasharray: 90 200;
+      animation: spin 1s linear infinite;
+      transform-origin: 22px 22px;
+    }
+
+    /* Fallback link */
+    .fallback {
+      font-size: 13px;
+      color: #7bc89a;
+    }
+
+    .fallback a {
+      color: #4ade80;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo-wrap">
+      <img src="../logo.png" alt="MealScan logo" width="60" height="60" />
+    </div>
+
+    <div class="wordmark">Meal<span>Scan</span></div>
+
+    <p class="tagline">Opening your Telegram bot…<br>Track calories with a photo.</p>
+
+    <svg class="loader" viewBox="0 0 44 44" aria-label="Loading" role="img">
+      <circle cx="22" cy="22" r="18" />
+    </svg>
+
+    <p class="fallback">
+      Not redirected? <a href="https://t.me/mealscan_ai_bot">Open in Telegram →</a>
+    </p>
+  </div>
+
+  <script>
+    window.location.href = 'https://t.me/mealscan_ai_bot';
+  </script>
+</body>
+</html>
